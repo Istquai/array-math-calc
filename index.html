@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content=" Kalkulator macierzy">
+    <meta name="author" content="Jan Kowalski">
+
+    <title>Kalkulator macierzy - Jan Kowalski</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/offcanvas.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="navbar-header"></div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a onclick="pokazDodaj()">Dodaj macierze</a></li>
+                <li><a onclick="pokazOdejmij()">Odejmij macierze</a></li>
+                <li><a onclick="pokazWyznacznik()">Wyznacznik macierzy</a></li>
+                <li><a onclick="pokazMnozenie()">Pomnóż macierze</a></li>
+                <li><a onclick="pokazOdwrotna()">Macierz odwrotna</a></li>
+                <li><a onclick="pokazTransponowana()">Macierz transponowana</a></li>
+            </ul>
+        </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+</nav><!-- /.navbar -->
+
+<div class="container">
+
+    <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-18 col-sm-12">
+            <p class="pull-right visible-xs">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+            </p>
+            <div class="jumbotron">
+                <h1>Kalkulator macierzy</h1>
+                <p>Na tej stronie możemy wyznaczać wyznaczniki macierzy, dodawać macierze, odejmować macierze, mnożyć macierze, obliczać macierz odwrotną oraz wykonać transpozycję macierzy.</p>
+                <p>Poszczególne obliczenia możemy wybrać z menu.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Rozmiar macierzy A:</h2>
+                    <div class="col-md-12">
+                        <input type="number" class="form-control" id="dlugosc-macierzy-a" placeholder="Podaj długość macierzy A">
+                        <input type="number" class="form-control" id="wysokosc-macierzy-a" placeholder="Podaj wysokość macierzy A">
+                        <button class="btn btn-primary" onclick="stworzMacierzA()">Stwórz macierz</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Rozmiar macierzy B:</h2>
+                    <div class="col-md-12">
+                        <input type="number" class="form-control" id="dlugosc-macierzy-b" placeholder="Podaj długość macierzy B">
+                        <input type="number" class="form-control" id="wysokosc-macierzy-b" placeholder="Podaj wysokość macierzy B">
+                        <button class="btn btn-primary" onclick="stworzMacierzB()">Stwórz macierz</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Macierz A:</h2>
+                    <div class="col-md-12">
+                        <form class="form-inline" id="macierz-a"></form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Macierz B:</h2>
+                    <div class="col-md-12">
+                        <form id="macierz-b"></form>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button class="btn btn-primary pokaz" id="dodaj" onclick="dodawanie()">Dodaj macierze</button>
+                    <button class="btn btn-primary ukryj" id="odejmij" onclick="odejmowanie()">Odejmij macierze</button>
+                    <button class="btn btn-primary ukryj" id="wyznacznik" onclick="wyswietlenieWyznacznika()">Oblicz wyznacznik macierzy</button>
+                    <button class="btn btn-primary ukryj" id="mnozenie" onclick="mnozenie()">Pomnóż macierze</button>
+                    <button class="btn btn-primary ukryj" id="odwrotna" onclick="wyswietlenieMacierzyOdwrotnej()">Oblicz macierz odwrotną</button>
+                    <button class="btn btn-primary ukryj" id="transponowana" onclick="transponowanie()">Wykonaj transpozycję macierzy</button>
+                </div>
+                <div class="col-md-12">
+                    <h2>Wynik:</h2>
+                    <div class="col-md-12" id="">
+                        <form class="form-inline" id="wynik"></form>
+
+                    </div>
+                </div>
+
+
+
+
+            </div><!--/row-->
+
+
+        </div><!--/.col-xs-12.col-sm-9-->
+        <!--/.sidebar-offcanvas-->
+    </div><!--/row-->
+
+    <hr>
+
+    <footer>
+        <p>Jan Kowalski</p>
+    </footer>
+
+</div><!--/.container-->
+<script src="js/skrypt2.js"></script>
+</body>
+</html>
